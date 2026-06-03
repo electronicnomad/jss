@@ -6,7 +6,7 @@ gcloud compute firewall-rules create allow-ssh-ingress-from-iap \
   --direction ingress \
   --source-ranges 35.235.240.0/20 \
   --network $vpcName \
-  --project $projectName \
+  --project=$projectName \
   --action allow \
   --rules tcp:22 
 
@@ -15,7 +15,7 @@ gcloud compute firewall-rules create allow-ssh-in-private \
   --direction ingress \
   --source-ranges="10.128.0.0/9" \
   --network $vpcName \
-  --project $projectName \
+  --project=$projectName \
   --action allow \
   --rules tcp:22
 
@@ -24,6 +24,6 @@ gcloud compute firewall-rules create allow-pinging-in-private \
   --direction ingress \
   --source-ranges="10.128.0.0/9" \
   --network $vpcName \
-  --project $projectName \
+  --project=$projectName \
   --action allow \
   --rules icmp

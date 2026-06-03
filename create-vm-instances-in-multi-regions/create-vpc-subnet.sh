@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 source ./main.env
 
 gcloud compute networks create $vpcName \

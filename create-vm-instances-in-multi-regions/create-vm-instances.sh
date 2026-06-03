@@ -9,5 +9,6 @@ do
   --no-address \
   --project=$projectName \
   --shielded-secure-boot \
-  --zone=$zoneName 
+  --zone=$zoneName &
 done
+wait

@@ -5,5 +5,6 @@ for zoneName in "${targetZones[@]}"
 do
   gcloud compute instances delete $zoneName-vm \
   --project=$projectName \
-  --zone=$zoneName 
+  --zone=$zoneName &
 done
+wait
